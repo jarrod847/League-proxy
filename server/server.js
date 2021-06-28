@@ -14,4 +14,8 @@ server.use("/player", summonerRouter);
 server.use("/match", matchRouter);
 server.use("/champions", championsRouter);
 
+server.get("/", (req, res) => {
+  res.send({ hello: "League of Legends proxy" });
+});
+
 module.exports = server;
